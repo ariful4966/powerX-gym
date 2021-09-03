@@ -1,0 +1,5 @@
+.header_bg {
+    background: url(../../../images/header_bg.jpg) no-repeat;
+    background-size: cover;
+    background-position-y: -50px;
+}
