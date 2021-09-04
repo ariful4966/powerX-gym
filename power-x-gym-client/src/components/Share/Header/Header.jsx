@@ -3,11 +3,11 @@ import './Header.css';
 import Banner from '../Banner/Banner';
 import Navigation from '../Navigation/Navigation';
 
-const Header = () => {
+const Header = ({home, title}) => {
     return (
         <header className="header_bg">
             <Navigation/>
-            <Banner/>
+            <Banner home={home} title={title}/>
             
         </header>
     );

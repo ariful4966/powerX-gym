@@ -2,9 +2,23 @@
 .brand_color {
   color: #fcd842
 }
-
+.nav-link.brand_color {
+  color: #fcd842 !important
+}
 .brand_bg {
   background: #fcd842;
   color: #000;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+}
+
+.section_heading {
+  text-align: center;
+}
+
+.section_heading h1 {
+  font-size: 45px;
+  font-family: 'Oswald';
   text-transform: uppercase;
 }

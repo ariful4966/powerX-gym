@@ -11,7 +11,7 @@ const Services = () => {
             .then(data => setServices(data))
     }, [services])
     return (
-        <section className="server_area my-5">
+        <section className="server_area my-5" id="service">
             <Container>
                 <Row>
                     {services.map(service=>

@@ -1,0 +1,32 @@
+.footer_logo .logo_brand {
+    font-size: 40px;
+    font-family: 'Oswald';
+    font-weight: 700;
+    color: #fff;
+}
+footer.footer_area {
+    background: #2a2929;
+    color: #fff;
+}
+
+.footer_content a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer_content>a {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.footer_content li {
+    list-style: none;
+}
+
+.footer_content li a {
+    color: #ddd;
+}

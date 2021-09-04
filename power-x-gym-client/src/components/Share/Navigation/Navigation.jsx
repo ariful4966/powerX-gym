@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = () => {
+  const [menu, setMenu] = useState('')
+  const { url } = useRouteMatch();
+  useEffect(() => {
+    setMenu(url)
+  }, [menu])
+
+
   return (
     <Navbar bg="transparent" className="py-3" >
       <Container>
@@ -11,12 +18,12 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Link className="nav-link text-white" to='/'>Home</Link>
-            <Nav.Link href="#link" className="text-white">Service</Nav.Link>
-            <Nav.Link href="#link" className="text-white">Our Classes</Nav.Link>
-            <Nav.Link href="#link" className="text-white">About us</Nav.Link>
+            <Link className={` nav-link ${menu === '/' ? 'brand_color' : 'text-white'}`} to='/'>Home</Link>
+            <Nav.Link href="/#service" className="text-white">Service</Nav.Link>
+            <Link to="/classes" className={` nav-link ${menu === ('/classes' || '/classes/') ? 'brand_color' : 'text-white'}`}>Our Classes</Link>
+            <Nav.Link href="/#about" className="text-white">About us</Nav.Link>
             <Nav.Link href="#link" className="text-white">Blog</Nav.Link>
-            <Nav.Link href="#link" className="text-white">Pricing</Nav.Link>
+            <Link to="/prices" className={` nav-link ${menu === '/prices' ? 'brand_color' : 'text-white'}`}>Pricing</Link>
             <Nav.Link href="#link" className="text-white">Contact us</Nav.Link>
           </Nav>
         </Navbar.Collapse>

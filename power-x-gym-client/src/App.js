@@ -5,14 +5,26 @@ import {
   Link
 } from "react-router-dom";
 import './App.css';
+import ClassDetails from "./components/ClassDetails/ClassDetails/ClassDetails";
+import Classes from "./components/Classes/Classes/Classes";
 import Home from './components/Home/Home/Home';
+import Footer from "./components/Share/Footer/Footer";
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Home />
-      </div>
+      <Switch>
+        <Route path="/classes/:clsId">
+          <ClassDetails/>
+        </Route>
+        <Route path="/classes">
+          <Classes/>
+        </Route>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+      </Switch>
+      <Footer/>
     </Router>
   );
 }

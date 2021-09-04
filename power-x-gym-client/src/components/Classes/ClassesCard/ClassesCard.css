@@ -1,0 +1,17 @@
+section.classes_area button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    border: none;
+    border-radius: 0;
+    position: absolute;
+    width: 90%;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section.classes_area .card {
+    position: relative;
+}
