@@ -9,7 +9,7 @@ export const classesData = [
     {
         id: 1,
         name: 'Psycho Traning',
-        
+
         picture: psycho
     },
     {
@@ -39,7 +39,7 @@ export const classesData = [
 
     }
 ]
-export const feture= [
+export const feture = [
     'Having Slimmer Shapely Thights',
     'Getting Stronger Body',
     'Increased Metabolism',
@@ -48,7 +48,7 @@ export const feture= [
     'Firm Hips and Tummy'
 ];
 
-export const shedule =[
+export const shedule = [
     {
         dayName: 'Monday',
         classTime: '8:00 AM - 9:00 AM'
@@ -72,5 +72,49 @@ export const shedule =[
     {
         dayName: 'Sutterday',
         classTime: '7:00 AM - 8:00 AM'
+    },
+];
+export const pracingData = [
+    {
+        _id: 1,
+        time: 'Builled Monthly',
+        name: 'Advanch Plane',
+        price: 140,
+        fetures: [
+            'Mobile-Optimze',
+            'Best Hosting',
+            'Free Custom',
+            'Outstanding',
+            'Happy Customers'
+        ],
+        picture: 'https://i.ibb.co/jTZF9ks/prograssion.jpg'
+    },
+    {
+        _id:2,
+        time: 'Builled Monthly',
+        name: 'Basic Plane',
+        price: 120,
+        fetures: [
+            'Mobile-Optimze',
+            'Best Hosting',
+            'Free Custom',
+            'Outstanding',
+            'Happy Customers'
+        ],
+        picture: 'https://i.ibb.co/7246fgF/workout.jpg'
+    },
+    {
+        _id: 3,
+        time: 'Builled Monthly',
+        name: 'Beginers',
+        price: 90,
+        fetures: [
+            'Mobile-Optimze',
+            'Best Hosting',
+            'Free Custom',
+            'Outstanding',
+            'Happy Customers'
+        ],
+        picture:'https://i.ibb.co/HH6406b/nutrition.jpg'
     },
 ]

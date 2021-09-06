@@ -8,23 +8,31 @@ import './App.css';
 import ClassDetails from "./components/ClassDetails/ClassDetails/ClassDetails";
 import Classes from "./components/Classes/Classes/Classes";
 import Home from './components/Home/Home/Home';
+import MemberShip from "./components/MemberShip/MemberShip/MemberShip";
+import Pricing from "./components/Pricing/Pricing/Pricing";
 import Footer from "./components/Share/Footer/Footer";
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/prices/:mbrId">
+          <MemberShip />
+        </Route>
+        <Route path="/prices">
+          <Pricing />
+        </Route>
         <Route path="/classes/:clsId">
-          <ClassDetails/>
+          <ClassDetails />
         </Route>
         <Route path="/classes">
-          <Classes/>
+          <Classes />
         </Route>
         <Route exact path="/">
-          <Home/>
+          <Home />
         </Route>
       </Switch>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }

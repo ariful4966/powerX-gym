@@ -1,0 +1,8 @@
+.creaditCard_area, .paypal_area{
+    border: 1px solid #000;
+    padding: 60px 30px;
+}
+.cardHeading input {
+    width: 25px;
+    height: 25px;
+}

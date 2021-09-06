@@ -1,0 +1,33 @@
+.pricing_content h5 {
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-weight: 600;
+}
+
+.pricing_content h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-weight: 900;
+}
+
+.pricing_content .card-body {
+    text-align: left;
+}
+
+.price-bg {
+    position: relative;
+    z-index: 1;
+}
+
+.price-bg::after {
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    content: '';
+    z-index: -1;
+    opacity: .5;
+}
