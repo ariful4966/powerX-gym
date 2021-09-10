@@ -1,52 +1,92 @@
-import psycho from '../../../images/victor-freitas-546919-unsplash.png';
-import self from '../../../images/baylee-gramling-5m4Z14SDL80-unsplash.jpg'
-import advance from '../../../images/humphrey-muleba-LOA2mTj1vhc-unsplash.jpg';
-import cardio from '../../../images/alora-griffiths-TuzrzArccvc-unsplash.jpg';
-import stranth from '../../../images/john-fornander-FIu48iuo_4g-unsplash.jpg';
-import weight from '../../../images/sven-mieke-Lx_GDv7VA9M-unsplash.jpg'
+
 
 export const classesData = [
     {
-        id: 1,
-        name: 'Psycho Traning',
 
-        picture: psycho
+        name: 'Psycho Traning',
+        body: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error nihil eos consequatur odio voluptate debitis autem, vitae quasi accusamus eum aliquam. Velit, debitis facere dolores quos in ducimus id, amet eveniet cum dolorem inventore nam deserunt. Officia nisi quos doloremque! Eaque, mollitia? Eaque tenetur iusto fugiat facilis? Possimus, animi doloribus quibusdam repellat atque asperiores, quasi debitis delectus laudantium quae error harum soluta labore pariatur dolorem laborum eligendi quos! Tempora voluptatum quas ratione obcaecati quam ipsa, ad aliquam amet. Inventore nisi consectetur perspiciatis odio adipisci asperiores repellendus veniam minus! Modi exercitationem incidunt pariatur aspernatur ab numquam consequuntur aperiam minus dolor eligendi! ',
+        picture: 'https://i.ibb.co/T2ZypWG/victor-freitas-546919-unsplash.png',
+        fetures: [
+            'Having Slimmer Shapely Thights',
+            'Getting Stronger Body',
+            'Increased Metabolism',
+            'Increased Muscular Endurance',
+            'Maximum Result in less Time',
+            'Firm Hips and Tummy'
+        ]
     },
     {
-        id: 2,
+
         name: 'Self Defence',
-        picture: self
+        body: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error nihil eos consequatur odio voluptate debitis autem, vitae quasi accusamus eum aliquam. Velit, debitis facere dolores quos in ducimus id, amet eveniet cum dolorem inventore nam deserunt. Officia nisi quos doloremque! Eaque, mollitia? Eaque tenetur iusto fugiat facilis? Possimus, animi doloribus quibusdam repellat atque asperiores, quasi debitis delectus laudantium quae error harum soluta labore pariatur dolorem laborum eligendi quos! Tempora voluptatum quas ratione obcaecati quam ipsa, ad aliquam amet. Inventore nisi consectetur perspiciatis odio adipisci asperiores repellendus veniam minus! Modi exercitationem incidunt pariatur aspernatur ab numquam consequuntur aperiam minus dolor eligendi! ',
+        picture: 'https://i.ibb.co/6FJ6KfX/baylee-gramling-5m4-Z14-SDL80-unsplash.jpg',
+        fetures: [
+            'Having Slimmer Shapely Thights',
+            'Getting Stronger Body',
+            'Increased Metabolism',
+            'Increased Muscular Endurance',
+            'Maximum Result in less Time',
+            'Firm Hips and Tummy'
+        ]
     },
     {
-        id: 3,
         name: 'Advance Gym',
-        picture: advance
+        body: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error nihil eos consequatur odio voluptate debitis autem, vitae quasi accusamus eum aliquam. Velit, debitis facere dolores quos in ducimus id, amet eveniet cum dolorem inventore nam deserunt. Officia nisi quos doloremque! Eaque, mollitia? Eaque tenetur iusto fugiat facilis? Possimus, animi doloribus quibusdam repellat atque asperiores, quasi debitis delectus laudantium quae error harum soluta labore pariatur dolorem laborum eligendi quos! Tempora voluptatum quas ratione obcaecati quam ipsa, ad aliquam amet. Inventore nisi consectetur perspiciatis odio adipisci asperiores repellendus veniam minus! Modi exercitationem incidunt pariatur aspernatur ab numquam consequuntur aperiam minus dolor eligendi! ',
+        picture: 'https://i.ibb.co/zhShK8J/humphrey-muleba-LOA2m-Tj1vhc-unsplash.jpg',
+        fetures: [
+            'Having Slimmer Shapely Thights',
+            'Getting Stronger Body',
+            'Increased Metabolism',
+            'Increased Muscular Endurance',
+            'Maximum Result in less Time',
+            'Firm Hips and Tummy'
+        ]
     },
     {
-        id: 4,
+
         name: 'Cardio Traning',
-        picture: cardio
+        body: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error nihil eos consequatur odio voluptate debitis autem, vitae quasi accusamus eum aliquam. Velit, debitis facere dolores quos in ducimus id, amet eveniet cum dolorem inventore nam deserunt. Officia nisi quos doloremque! Eaque, mollitia? Eaque tenetur iusto fugiat facilis? Possimus, animi doloribus quibusdam repellat atque asperiores, quasi debitis delectus laudantium quae error harum soluta labore pariatur dolorem laborum eligendi quos! Tempora voluptatum quas ratione obcaecati quam ipsa, ad aliquam amet. Inventore nisi consectetur perspiciatis odio adipisci asperiores repellendus veniam minus! Modi exercitationem incidunt pariatur aspernatur ab numquam consequuntur aperiam minus dolor eligendi! ',
+        picture: 'https://i.ibb.co/6NGxhcy/alora-griffiths-Tuzrz-Arccvc-unsplash.jpg',
+        fetures: [
+            'Having Slimmer Shapely Thights',
+            'Getting Stronger Body',
+            'Increased Metabolism',
+            'Increased Muscular Endurance',
+            'Maximum Result in less Time',
+            'Firm Hips and Tummy'
+        ]
     },
     {
-        id: 5,
+
         name: 'Stranth Traning',
-        picture: stranth
+        body: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error nihil eos consequatur odio voluptate debitis autem, vitae quasi accusamus eum aliquam. Velit, debitis facere dolores quos in ducimus id, amet eveniet cum dolorem inventore nam deserunt. Officia nisi quos doloremque! Eaque, mollitia? Eaque tenetur iusto fugiat facilis? Possimus, animi doloribus quibusdam repellat atque asperiores, quasi debitis delectus laudantium quae error harum soluta labore pariatur dolorem laborum eligendi quos! Tempora voluptatum quas ratione obcaecati quam ipsa, ad aliquam amet. Inventore nisi consectetur perspiciatis odio adipisci asperiores repellendus veniam minus! Modi exercitationem incidunt pariatur aspernatur ab numquam consequuntur aperiam minus dolor eligendi! ',
+        picture: 'https://i.ibb.co/MsR7LCK/john-fornander-FIu48iuo-4g-unsplash.jpg',
+        fetures: [
+            'Having Slimmer Shapely Thights',
+            'Getting Stronger Body',
+            'Increased Metabolism',
+            'Increased Muscular Endurance',
+            'Maximum Result in less Time',
+            'Firm Hips and Tummy'
+        ]
     },
     {
-        id: 6,
+
         name: 'Weight Caring Traning',
-        picture: weight
+        body: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error nihil eos consequatur odio voluptate debitis autem, vitae quasi accusamus eum aliquam. Velit, debitis facere dolores quos in ducimus id, amet eveniet cum dolorem inventore nam deserunt. Officia nisi quos doloremque! Eaque, mollitia? Eaque tenetur iusto fugiat facilis? Possimus, animi doloribus quibusdam repellat atque asperiores, quasi debitis delectus laudantium quae error harum soluta labore pariatur dolorem laborum eligendi quos! Tempora voluptatum quas ratione obcaecati quam ipsa, ad aliquam amet. Inventore nisi consectetur perspiciatis odio adipisci asperiores repellendus veniam minus! Modi exercitationem incidunt pariatur aspernatur ab numquam consequuntur aperiam minus dolor eligendi! ',
+        picture: 'https://i.ibb.co/3CJM3fs/sven-mieke-Lx-GDv7-VA9-M-unsplash.jpg',
+        fetures: [
+            'Having Slimmer Shapely Thights',
+            'Getting Stronger Body',
+            'Increased Metabolism',
+            'Increased Muscular Endurance',
+            'Maximum Result in less Time',
+            'Firm Hips and Tummy'
+        ]
 
     }
 ]
-export const feture = [
-    'Having Slimmer Shapely Thights',
-    'Getting Stronger Body',
-    'Increased Metabolism',
-    'Increased Muscular Endurance',
-    'Maximum Result in less Time',
-    'Firm Hips and Tummy'
-];
+
 
 export const shedule = [
     {
@@ -74,47 +114,3 @@ export const shedule = [
         classTime: '7:00 AM - 8:00 AM'
     },
 ];
-export const pracingData = [
-    {
-        _id: 1,
-        time: 'Builled Monthly',
-        name: 'Advanch Plane',
-        price: 140,
-        fetures: [
-            'Mobile-Optimze',
-            'Best Hosting',
-            'Free Custom',
-            'Outstanding',
-            'Happy Customers'
-        ],
-        picture: 'https://i.ibb.co/jTZF9ks/prograssion.jpg'
-    },
-    {
-        _id:2,
-        time: 'Builled Monthly',
-        name: 'Basic Plane',
-        price: 120,
-        fetures: [
-            'Mobile-Optimze',
-            'Best Hosting',
-            'Free Custom',
-            'Outstanding',
-            'Happy Customers'
-        ],
-        picture: 'https://i.ibb.co/7246fgF/workout.jpg'
-    },
-    {
-        _id: 3,
-        time: 'Builled Monthly',
-        name: 'Beginers',
-        price: 90,
-        fetures: [
-            'Mobile-Optimze',
-            'Best Hosting',
-            'Free Custom',
-            'Outstanding',
-            'Happy Customers'
-        ],
-        picture:'https://i.ibb.co/HH6406b/nutrition.jpg'
-    },
-]

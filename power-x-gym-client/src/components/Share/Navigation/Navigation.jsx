@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 import { Link, useRouteMatch } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = () => {
+  const user = useSelector(state => state.authReducer)
   const [menu, setMenu] = useState('')
   const { url } = useRouteMatch();
   useEffect(() => {
@@ -25,6 +27,13 @@ const Navigation = () => {
             <Nav.Link href="#link" className="text-white">Blog</Nav.Link>
             <Link to="/prices" className={` nav-link ${menu === '/prices' ? 'brand_color' : 'text-white'}`}>Pricing</Link>
             <Nav.Link href="#link" className="text-white">Contact us</Nav.Link>
+            {
+              user.isLogin &&
+
+              <Nav.Link href="/" className="userPhoto">
+                <img src={user.photo} alt="User Picute" title={user.name} className="w-100" />
+              </Nav.Link>
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>

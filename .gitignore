@@ -1,4 +1,5 @@
 /power-x-gym-client/node_modules
+/power-x-gym-client/src/components/Login/firebase.config.js
 /power-x-gym-server/node_modules
 /power-x-gym-server/.env
 

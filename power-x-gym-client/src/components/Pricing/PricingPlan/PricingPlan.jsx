@@ -1,9 +1,11 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { pracingData } from '../../Classes/ViewClasses/classesData';
+import { useSelector } from 'react-redux';
 import PricingPlanItem from '../PricingPlanItem/PricingPlanItem';
 
 const PricingPlan = () => {
+    const pricingData = useSelector(state=>state.dataReducer.pricing);
+    console.log(pricingData);
     return (
         <section className="pricing_area my-5">
             <Container>
@@ -14,7 +16,7 @@ const PricingPlan = () => {
                 <div className="pricing_content">
                     <Row>
                         {
-                            pracingData.map((pricingItem, idx)=>
+                            pricingData.map((pricingItem, idx)=>
                                 <Col md={4} key={idx}>
                                     <PricingPlanItem pricingPlan={pricingItem}/>
                                 </Col>

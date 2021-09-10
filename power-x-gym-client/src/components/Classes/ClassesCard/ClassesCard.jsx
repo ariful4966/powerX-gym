@@ -12,10 +12,11 @@ const ClassesCard = ({ classe }) => {
     const handleUrl = (id) => {
         history.push(`${url}/${id}`)
     }
+    console.log(classe);
     return (
         <Card>
             <Card.Img variant="top" src={classe.picture} style={{ height: '400px' }} />
-            <Button className="brand_bg" onClick={() => handleUrl(classe.id)}><span>{classe.name}</span><FontAwesomeIcon icon={faArrowRight} /></Button>
+            <Button className="brand_bg" onClick={() => handleUrl(classe._id)}><span>{classe.name}</span><FontAwesomeIcon icon={faArrowRight} /></Button>
         </Card>
     );
 };

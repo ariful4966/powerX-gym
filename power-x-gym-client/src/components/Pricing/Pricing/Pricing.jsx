@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../Share/Footer/Footer';
 import Header from '../../Share/Header/Header';
 import PricingPlan from '../PricingPlan/PricingPlan';
 
@@ -7,6 +8,7 @@ const Pricing = () => {
         <div>
             <Header title="Pricing Plan" />
             <PricingPlan />
+            <Footer/>
         </div>
     );
 };

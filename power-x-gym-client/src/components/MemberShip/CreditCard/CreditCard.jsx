@@ -1,6 +1,7 @@
 
 import { loadStripe } from '@stripe/stripe-js';
 import React, { useMemo, useState } from "react";
+import { useParams } from 'react-router';
 import {
     useStripe,
     useElements,
@@ -11,6 +12,7 @@ import {
 
 import './CreditCard.css'
 import { Col, Row } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 export const stripePromise = loadStripe('pk_test_51JM4OyEZ2Er3eAJmVM5XQZh5riwnOfQyhTD6RQHfP94rkWtb2wJiZLBmtNZtNhn6Jd4oat4WRFcnt92NzTwHMLrS005INPWW1a');
 const useOptions = () => {
     const options = useMemo(
@@ -36,11 +38,14 @@ const useOptions = () => {
 };
 
 const CreditCard = () => {
+    const { mrdId } = useParams();
     const [paymentError, setPaymentError] = useState('')
     const [paymentSuccess, setPaymentSuccess] = useState('')
     const stripe = useStripe();
     const elements = useElements();
     const options = useOptions();
+    const ordersInfo = useSelector(state => state.dataReducer.orders)
+
 
     const handleSubmit = async event => {
         event.preventDefault();
@@ -62,9 +67,27 @@ const CreditCard = () => {
             setPaymentSuccess(paymentMethod);
             setPaymentError('')
             // handlePayment(paymentMethod.id)
+            handleOudateOrder(paymentMethod.id)
+
+
+
         }
     };
-    console.log('error:', paymentError ,'success:',paymentSuccess );
+    // console.log('error:', paymentError, 'success:', paymentSuccess);
+    const handleOudateOrder = id => {
+        const extOrder = ordersInfo.find(odr => odr.productId === mrdId)
+        if (extOrder) {
+            extOrder.PaymentMethodId =id
+        }
+
+        fetch('http://localhost:5000/order', {
+            method: 'PATCH',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(extOrder)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+    }
 
     return (
         <form onSubmit={handleSubmit}>
@@ -75,18 +98,18 @@ const CreditCard = () => {
                         Card number
                         <CardNumberElement
                             options={options}
-                            onReady={() => {
-                                console.log("CardNumberElement [ready]");
-                            }}
-                            onChange={event => {
-                                console.log("CardNumberElement [change]", event);
-                            }}
-                            onBlur={() => {
-                                console.log("CardNumberElement [blur]");
-                            }}
-                            onFocus={() => {
-                                console.log("CardNumberElement [focus]");
-                            }}
+                        // onReady={() => {
+                        //     console.log("CardNumberElement [ready]");
+                        // }}
+                        // onChange={event => {
+                        //     console.log("CardNumberElement [change]", event);
+                        // }}
+                        // onBlur={() => {
+                        //     console.log("CardNumberElement [blur]");
+                        // }}
+                        // onFocus={() => {
+                        //     console.log("CardNumberElement [focus]");
+                        // }}
                         />
                     </label>
                 </Col>
@@ -101,18 +124,18 @@ const CreditCard = () => {
                         Expiration date
                         <CardExpiryElement
                             options={options}
-                            onReady={() => {
-                                console.log("CardNumberElement [ready]");
-                            }}
-                            onChange={event => {
-                                console.log("CardNumberElement [change]", event);
-                            }}
-                            onBlur={() => {
-                                console.log("CardNumberElement [blur]");
-                            }}
-                            onFocus={() => {
-                                console.log("CardNumberElement [focus]");
-                            }}
+                        // onReady={() => {
+                        //     console.log("CardNumberElement [ready]");
+                        // }}
+                        // onChange={event => {
+                        //     console.log("CardNumberElement [change]", event);
+                        // }}
+                        // onBlur={() => {
+                        //     console.log("CardNumberElement [blur]");
+                        // }}
+                        // onFocus={() => {
+                        //     console.log("CardNumberElement [focus]");
+                        // }}
                         />
                     </label>
                 </Col>
@@ -121,18 +144,18 @@ const CreditCard = () => {
                         CVC
                         <CardCvcElement
                             options={options}
-                            onReady={() => {
-                                console.log("CardNumberElement [ready]");
-                            }}
-                            onChange={event => {
-                                console.log("CardNumberElement [change]", event);
-                            }}
-                            onBlur={() => {
-                                console.log("CardNumberElement [blur]");
-                            }}
-                            onFocus={() => {
-                                console.log("CardNumberElement [focus]");
-                            }}
+                        // onReady={() => {
+                        //     console.log("CardNumberElement [ready]");
+                        // }}
+                        // onChange={event => {
+                        //     console.log("CardNumberElement [change]", event);
+                        // }}
+                        // onBlur={() => {
+                        //     console.log("CardNumberElement [blur]");
+                        // }}
+                        // onFocus={() => {
+                        //     console.log("CardNumberElement [focus]");
+                        // }}
                         />
                     </label>
                 </Col>
